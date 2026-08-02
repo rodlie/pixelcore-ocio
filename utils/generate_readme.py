@@ -54,7 +54,6 @@ def generate_readme(config_file="config.ocio", output_file="README.md"):
         md.append("")
 
     md.append("## Displays & Views\n")
-    md.append("These are available in the user interface for viewing.\n")
 
     displays = config.get('displays', {})
     for display_name, views in displays.items():

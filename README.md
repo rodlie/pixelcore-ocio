@@ -62,8 +62,6 @@ RRT version ut33
 
 ## Displays & Views
 
-These are available in the user interface for viewing.
-
 ### sRGB
 - **Standard** (Target: `sRGB`)
 - **ACES 1.3** (Target: `sRGB`)
