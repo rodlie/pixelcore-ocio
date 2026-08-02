@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
 import os
+import sys
 
-def generate_qrc(output_filename="ocio.qrc", prefix="/ocio"):
+def generate_qrc(target_dir, output_filename="ocio.qrc", prefix="/ocio"):
+    base_dir = os.path.abspath(target_dir)
+    if not os.path.isdir(base_dir):
+        print(f"Error: The directory '{base_dir}' does not exist.")
+        sys.exit(1)
+
+    output_path = os.path.join(base_dir, output_filename)
+
     script_name = os.path.basename(__file__)
-    ignore_files = {output_filename, script_name, 'README.py'}
-    base_dir = os.path.abspath(os.path.dirname(__file__))
+    ignore_files = {output_filename, script_name, 'generate_readme.py'}
 
     lines = []
     lines.append("<!DOCTYPE RCC>")
@@ -27,10 +34,12 @@ def generate_qrc(output_filename="ocio.qrc", prefix="/ocio"):
     lines.append('  </qresource>')
     lines.append('</RCC>')
 
-    with open(output_filename, "w", encoding="utf-8") as f:
+    with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
 
-    print(f"Generated '{output_filename}' with {len(lines) - 4} files using prefix '{prefix}'.")
+    file_count = len(lines) - 4
+    print(f"Generated '{output_filename}' in '{base_dir}' with {file_count} files under prefix '{prefix}'.")
 
 if __name__ == "__main__":
-    generate_qrc()
+    target = sys.argv[1] if len(sys.argv) > 1 else "."
+    generate_qrc(target)
