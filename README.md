@@ -1,4 +1,4 @@
-# PixelCore AgX 2026.8.1
+# PixelCore AgX 2026.8.2
 
 Based on Blender 5.2 configuration.
 AgX by Troy James Sobotka.
