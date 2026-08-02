@@ -74,7 +74,7 @@ def generate_readme(config_file="config.ocio", output_file="README.md"):
         name = cs.get('name', 'Unknown')
         desc = cs.get('description', '').strip()
         aliases = cs.get('aliases', [])
-        alias_str = f" *(Aliases: {', '.join(aliases)})*" if aliases else ""
+        alias_str = f" **Aliases:** *{', '.join(aliases)}*" if aliases else ""
 
         md.append(f"### {name}")
 
