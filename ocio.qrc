@@ -1,0 +1,31 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource prefix="/ocio">
+    <file>README.md</file>
+    <file>config.ocio</file>
+    <file>filmic/filmic_desat_33.cube</file>
+    <file>filmic/filmic_to_0-35_1-30.spi1d</file>
+    <file>filmic/filmic_to_0-48_1-09.spi1d</file>
+    <file>filmic/filmic_to_0-60_1-04.spi1d</file>
+    <file>filmic/filmic_to_0-70_1-03.spi1d</file>
+    <file>filmic/filmic_to_0-85_1-011.spi1d</file>
+    <file>filmic/filmic_to_0.99_1-0075.spi1d</file>
+    <file>filmic/filmic_to_1.20_1-00.spi1d</file>
+    <file>icc/README.md</file>
+    <file>icc/compatibleWithAdobeRGB1998.icc</file>
+    <file>icc/g24_rec2020_display.icc</file>
+    <file>icc/g24_rec709_display.icc</file>
+    <file>icc/g26_xyzd65_display.icc</file>
+    <file>icc/sRGB2014.icc</file>
+    <file>icc/srgb_p3d65_display.icc</file>
+    <file>luts/AgX_Base_P3.cube</file>
+    <file>luts/AgX_Base_Rec2020.cube</file>
+    <file>luts/AgX_Base_sRGB.cube</file>
+    <file>luts/AgX_False_Color.spi1d</file>
+    <file>luts/AgX_Rec2100-HLG_p3_lim.cube</file>
+    <file>luts/Guard_Rail_Shaper_EOTF.spi1d</file>
+    <file>luts/luminance_compensation_bt2020.cube</file>
+    <file>luts/pbrNeutral.cube</file>
+    <file>luts/xyz_E_to_D65.spimtx</file>
+  </qresource>
+</RCC>
